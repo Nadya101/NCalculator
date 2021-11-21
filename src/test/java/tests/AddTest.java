@@ -24,16 +24,6 @@ public class AddTest {
         System.out.println("Test start");
     }
 
-    @AfterTest
-    public void textAfterTest() {
-        System.out.println("Test finished");
-        try {
-            Thread.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     @DataProvider(parallel = true)
     public Object[][] addData() {
         return new Object[][]{
