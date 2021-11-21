@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Test suite" parallel="classes">
+    <test name="Test Calculator">
+        <groups>
+            <run>
+                <include name="Math tests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.AddTest"/>
+            <class name="tests.DivisionTest"/>
+            <class name="tests.SubtractTest"/>
+            <class name="tests.MultiplicationTest"/>
+        </classes>
+    </test>
+
+    <test name="Menu test">
+        <groups>
+            <run>
+                <include name="Console test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.ReadDoubleTest"/>
+            <class name="tests.ReadIntTest"/>
+        </classes>
+    </test>
+
+</suite>
